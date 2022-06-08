@@ -1,0 +1,36 @@
+﻿@using System;
+@using View_Bag.Models;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @{
+        foreach (var item in ViewBag.Fruitarray)
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+
+<ul>
+    @{
+        foreach (var item in ViewBag.sports)
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+@{
+    var a = ViewBag.Employeee;
+}
+
+<p>@a.Id</p>
+<p>@a.Name</p>
+<p> @a.Designation</p>
+
+
+
+

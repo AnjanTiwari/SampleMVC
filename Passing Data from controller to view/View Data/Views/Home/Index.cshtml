@@ -1,0 +1,37 @@
+﻿@using System;
+@using System.Collections.Generic;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p> @ViewData["Message"]</p>
+<p> @ViewData["Current Time"]</p>
+
+<ul>
+    @{
+        foreach (var item in (String[])ViewData["Fruits Array"])
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+
+<ul>
+    @{
+        foreach (string item in (List<string>)ViewData["Sports list"])
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+
+@{ 
+    var a = (View_Data.Models.Employee)ViewData["EmployeeInfo"];
+
+}
+
+<p>@a.Id</p>
+<p>@a.Name</p>
+<p>@a.Designation</p>

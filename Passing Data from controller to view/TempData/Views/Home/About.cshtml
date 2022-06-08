@@ -1,0 +1,22 @@
+﻿@using System;
+
+
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+<p>
+   your Viewbag =@ViewBag.var1
+</p>
+<p> your viewdata= @ViewData["var2"]</p>
+<p> your tempdata =@TempData["var3"]</p>
+
+<ul>
+    @{
+        foreach (string item in (string[])TempData["tempDataArray"])
+        {
+            <li>@item</li>
+        }
+    }
+</ul>

@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!--
+    Razor is syntax, based on ASP.NET framework that allows creating views
+    MVC framework uses a view engine to convert  the code of a view into HTML
+    markup that a browser can understand.
+
+    Razor Engine: 
+    is used as default view engine by the MVC framework.
+    compiles a view of  you app  when view is requested for the first time.
+    First requires identifying the server side code from the markup code to 
+    interprete the server side code embedded  inside the view file.
+
+    Uses at the rate symbol to separate the server side code  from markup code.
+
+-->
+
+<h2>Index</h2>
+<!-- Inline Expression-->
+@*
+    <p>Todays date and time : @DateTime.Now </p>
+    <P>This year is : @DateTime.Now.Year</P>
+*@
+<!--  Variable Declaration -->
+@*@{
+        string name = "Anjan Tiwari";
+        var todays_time = DateTime.Now.ToLongTimeString();
+    }*@
+
+@*<h3> Your Name : @name</h3>
+    <h3> Time : @todays_time</h3>*@
+
+<!-- Switch -->
+
+@*@{
+    string fruit = "Apple";
+    switch (fruit)
+    {
+        case "Apple":
+            <h3> You have selected APPLE</h3>
+            break;
+        case "Banana":
+            <h3> You have selected BANANA</h3>
+            break;
+        case "Grapes":
+            <h3> You have selected GRAPES</h3>
+            break;
+        default:
+            <h3> Invalid fruit</h3>
+            break;
+    }
+
+    }*@
+
+<!-- Loops -->
+@{ 
+    for (int i = 0; i < 10; i++)
+    {
+        <h2>@i</h2>
+    }
+}
+
+

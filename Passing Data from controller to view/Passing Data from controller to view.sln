@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View Bag", "View Bag\View B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempData", "TempData\TempData.csproj", "{720F6EF2-0BB9-438E-8DE7-0279F8FE346D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session", "Session\Session.csproj", "{ED58FFF8-9B63-4FAF-A0F2-12C071F3B226}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{720F6EF2-0BB9-438E-8DE7-0279F8FE346D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{720F6EF2-0BB9-438E-8DE7-0279F8FE346D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{720F6EF2-0BB9-438E-8DE7-0279F8FE346D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED58FFF8-9B63-4FAF-A0F2-12C071F3B226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED58FFF8-9B63-4FAF-A0F2-12C071F3B226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED58FFF8-9B63-4FAF-A0F2-12C071F3B226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED58FFF8-9B63-4FAF-A0F2-12C071F3B226}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

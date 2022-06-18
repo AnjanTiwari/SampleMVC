@@ -54,5 +54,19 @@ namespace View_Bag.Controllers
 
             return View();
         }
+
+        public ActionResult Doom()
+        {
+            string[] Subject = { "History","Hindi","Geography","Science" };
+            ViewBag.Subjects = Subject;
+
+            int[] Silver = {450,590,680,740, };
+            ViewBag.Silva = Silver;
+
+            ViewBag.list = new List<int>();
+            
+            return View();
+
+        }
     }
 }

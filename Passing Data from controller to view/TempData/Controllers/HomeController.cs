@@ -31,9 +31,19 @@ namespace TempData.Controllers
             string[] fruits = { "Apple", "banana", "grapes", "orange" };
 
             TempData["tempDataArray"] = fruits;
-            return View();
+            return RedirectToAction("About"); // this will escape Index and execute About.
+           // return View();
         }
         public ActionResult About()
+        {
+            if(TempData["var3"] != null)
+            {
+                TempData["var3"].ToString();
+            }
+            TempData.Keep(); //we use it to go with data to some other(next) request or view ....better use sessions than this function 
+            return View();
+        }
+        public ActionResult Contact()
         {
 
             return View();

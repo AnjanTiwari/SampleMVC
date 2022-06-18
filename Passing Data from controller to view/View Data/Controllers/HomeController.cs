@@ -13,6 +13,7 @@ namespace View_Data.Controllers
     1. ViewData
     2. ViewBag
     3. TempData
+    4. Session
 
     >it passes data from controller to view
     >it is dictionary of objects from ViewDataDictionary class.

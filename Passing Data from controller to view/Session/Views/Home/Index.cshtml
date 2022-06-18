@@ -6,4 +6,18 @@
 <h2>Index</h2>
 <p> this is from Index </p>
 <br />
+<p>
+    your Viewbag =@ViewBag.var1
+</p>
+<p> your viewdata= @ViewData["var2"]</p>
+<p> your tempdata =@TempData["var3"]</p>
+<p> you sessiondata = @Session["var4"]</p>
 
+<ul>
+    @{
+        foreach (var item in (String[])Session["abc"])
+        {
+            <li> @item </li>
+        }
+    }
+</ul>

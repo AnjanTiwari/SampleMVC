@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<input type="text" name="fullname" id="name" value="" />
+<br />
+<br />
+@Html.TextBox("fullname")
+@*there several version of overloaded textbox lets see*@
+<br />
+<br />
+@Html.TextBox("fullname", "ANJAN")
+<br />
+<br />
+@*below way mentioned class is define or called in Content folder Site.css*@
+@Html.TextBox("fullname", "ANJAN", new { @class = "TextBoxStyle" })
+<br />
+<br />
+@**form control is bootstrap class*@
+@Html.TextBox("fullname", "ANJAN", new { @class = "form-control" })
+
+@*note : when you want to use c# reserve keywords put @ before them *@
+
+@*Inline css
+    to set attributes use following overloaded version. Note that we are passing HTML
+        attributes (style and title as annonymous type)
+    <br />
+    <br />
+    @Html.TextBox("fullname", "ANJAN", new { style = "backgroud:lightgreen"; "color:red"; "font-weight:bold"}) *@

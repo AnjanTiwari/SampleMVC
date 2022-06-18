@@ -69,3 +69,4 @@ D:\MVC 5\Passing Data from controller to view\Session\obj\Debug\Session.csproj.C
 D:\MVC 5\Passing Data from controller to view\Session\obj\Debug\Session.csproj.CopyComplete
 D:\MVC 5\Passing Data from controller to view\Session\obj\Debug\Session.dll
 D:\MVC 5\Passing Data from controller to view\Session\obj\Debug\Session.pdb
+D:\MVC 5\Passing Data from controller to view\Session\obj\Debug\Session.csproj.AssemblyReference.cache

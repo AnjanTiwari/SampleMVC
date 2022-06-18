@@ -16,7 +16,7 @@ namespace Session.Controllers
 
      */
 
-
+    //in Web.config go here see bwlow tag
    //system.web>
    //sessionState timeout = "30" ></ sessionState >
 

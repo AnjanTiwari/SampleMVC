@@ -1,0 +1,35 @@
+﻿@*1)
+    @model Strongly_typed_views.Models.Employee*@
+@model <List<Strongly_typed_views.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h2>
+    List of Employees
+</h2>
+
+@{
+    @*1)
+
+        <ul>
+            <li>@Model.ID</li>
+            <li>@Model.Name</li>
+            <li>@Model.age</li>
+        </ul>*@
+
+
+    <ul>
+        @{ foreach (var item in Model)
+            {
+                <li>@item.ID</li>
+                <li>@item.Name</li>
+                <li>@item.age</li>
+                <br />
+
+            }
+        }
+    </ul>
+
+}

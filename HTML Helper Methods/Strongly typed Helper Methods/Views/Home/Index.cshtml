@@ -1,0 +1,29 @@
+﻿@model Strongly_typed_Helper_Methods.Models.SignUp
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+
+{
+    @Html.HiddenFor(model => model.id)
+
+
+    <p>@Html.LabelFor(model => model.UserName) &nbsp; @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })</p>
+
+    <p>@Html.LabelFor(model => model.UserPassword) &nbsp; @Html.PasswordFor(model => model.UserPassword, new { @class = "form-control" })</p>
+
+    <p>@Html.LabelFor(model => model.Gender) &nbsp; @Html.DropDownListFor(model => model.Gender, new SelectList(new[] { "Male", "Female" }), "Select", new { @class = "form-control" })</p>
+
+    <p>@Html.LabelFor(model => model.Email) &nbsp; @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })</p>
+
+    <p>@Html.LabelFor(model => model.Comment) &nbsp; @Html.TextAreaFor(model => model.Comment, new { @class = "form-control" })</p>
+
+    <input type="submit" value="Submit" class="form-control" />
+
+    @Html.ActionLink("Lets adddd", "Index", "Home1");
+
+}

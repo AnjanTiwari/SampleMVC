@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact</h2>
+
+<h3>Celestial Bodies</h3>
+@Html.Partial("_EMPpartialView");
+<br />
+<br />
+@{
+    Html.RenderPartial("_EMPpartialView");
+
+}
+<br />
+@Html.Partial("_loginform")

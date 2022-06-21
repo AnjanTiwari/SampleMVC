@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h3>Celestial Bodies</h3>
+    @Html.Partial("_EMPpartialView");
+<br />
+<br />
+@{ 
+    Html.RenderPartial("_EMPpartialView");
+
+}
+<br />
+@Html.Partial("_loginform")
+
+@{ 
+    Html.RenderPartial("_loginform");
+}

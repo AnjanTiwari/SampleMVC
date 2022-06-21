@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+
+<h2><b>Let's Start Registration</b></h2>
+
+
+@{
+    Html.BeginForm("Index", "Home");
+}
+
+
+@Html.Label("Username") &nbsp; @Html.TextBox("Username")
+<br />
+<br />
+@Html.Label("Password") &nbsp; @Html.Password("pass")
+<br />
+<br />
+@Html.Label("Male") &nbsp; @Html.RadioButton("Gender", "Male") @*if we don't keep name same then both options will be selecetd '*@
+@Html.Label("Female") &nbsp; @Html.RadioButton("Gender", "Female", true)@*if you put true then this will be automatically checked*@
+<br />
+<br />
+@Html.Label("Select Country") &nbsp; @Html.DropDownList("Country List", new SelectList(new[] { "India", "SriLanka", "SouthAfrica", "Australia" }), "Select")
+<br />
+<br />
+@Html.Label("Address") &nbsp; @Html.TextArea("Comments", "", 5, 20, null)
+<br />
+<br />
+@Html.CheckBox("AcceptTerms") &nbsp; @Html.Label("I accept the terms and conditions")
+<br />
+<br />
+@Html.CheckBox("AcceptTerms", true) &nbsp; @Html.Label("I accept the terms and conditions")
+<br />
+<br />
+@*we dont have any method for button ...we give through html only*@
+<input type="button" value="Submit" />

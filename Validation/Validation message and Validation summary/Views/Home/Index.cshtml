@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index1</h2>
+
+<p>
+    @Html.ValidationSummary("",new { @class="text-danger"}) @*we are keeping first argument empty because we don't want to give any name to it'*@
+</p>
+
+@using (Html.BeginForm())
+{
+
+    <p> Name : @Html.TextBox("fullname", "", new { @class= "form-control"}) &nbsp; <b style="color:red">@ViewData["Fullname Error"]</b>  </p>
+    @*@Html.ValidationMessage("fullname", new { @class = "text-danger" })*@
+
+    <p> Age : @Html.TextBox("Age", "", new { @class = "form-control" }) &nbsp; <b style="color:red">@ViewData["Age Error"]</b></p>
+    
+    @*@Html.ValidationMessage("Age", new { @class = "text-danger" })*@
+
+    <p> Email Id : @Html.TextBox("Email", "", new { @class = "form-control" }) &nbsp; <b style="color:red">@ViewData["Email Error"]</b></p>
+    
+    @*@Html.ValidationMessage("Email", new { @class = "text-danger" })*@
+    <br />
+    <br />
+
+
+
+
+     <input type="submit" value="Submit" class="btn btn-info"/>
+
+    @Html.Raw(@ViewData["SuccessMessage"]); <!--this method will remove that script tagging part-->
+
+
+    @*@Html.ActionLink("Check for Validation summary ","Index","Home1")*@
+}

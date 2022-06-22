@@ -22,7 +22,7 @@ namespace Validation_message_and_Validation_summary.Controllers
      */
     public class HomeController : Controller
     {
-        string EmailPatern = "A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)Z";
+        string EmailPatern = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
         // GET: Home
         public ActionResult Index()
         {
@@ -34,8 +34,8 @@ namespace Validation_message_and_Validation_summary.Controllers
 
             if(fullname.Equals("")==true)
             {
-                ModelState.AddModelError("fullname", "Full name is required !");
-                ViewData["Fullname Error"] = "*";
+                ModelState.AddModelError("fullname", "Full name is required !");//name and custom message
+                ViewData["Fullname Error"] = "*";//for summary
             }
             if (Age.Equals("") == true)
             {
@@ -55,6 +55,11 @@ namespace Validation_message_and_Validation_summary.Controllers
                 ModelState.AddModelError("Email", "Email is Invalid!");
                 ViewData["Email Error"] = "*";
 
+            }
+            if(ModelState.IsValid==true)
+            {
+                ViewData["SuccesMessage"] = "<script>alert('Data is been sucessfully submitted')</script>";
+                ModelState.Clear();
             }
 
             return View();

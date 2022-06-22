@@ -1,0 +1,52 @@
+﻿@model Required.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    <p>@Html.LabelFor(model => model.id) &nbsp; @Html.TextBoxFor(model => model.id, "", new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.id, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.Username) &nbsp; @Html.TextBoxFor(model => model.Username, "", new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.Password) &nbsp; @Html.PasswordFor(model => model.Password, new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.ConfirmPassword) &nbsp; @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.Age) &nbsp; @Html.TextBoxFor(model => model.Age, "", new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.Gender) &nbsp; @Html.TextBoxFor(model => model.Gender, "", new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.Email) &nbsp; @Html.TextBoxFor(model => model.Email, "", new { @class = "form-control" })</p>
+    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.OrganizationName) &nbsp; @Html.TextBoxFor(model => model.OrganizationName, new { @class = "form-control", @Value = "Cognizant", @readonly = true })</p> //here read only will disable editing the value of textbox
+
+    <p>@Html.LabelFor(model => model.EmpAddress) &nbsp; @Html.EditorFor(model => model.EmpAddress, new { htmlattributes = new { @class = "form-control" } })</p>
+    @Html.ValidationMessageFor(model => model.EmpAddress, "", new { @class = "text-danger" })
+
+
+
+    <p>@Html.LabelFor(model => model.EmpJoiningDate) &nbsp; @Html.EditorFor(model => model.EmpJoiningDate, new { htmlattributes = new { @class = "form-control" } })</p>
+    @Html.ValidationMessageFor(model => model.EmpJoiningDate, "", new { @class = "text-danger" })
+
+    <p>@Html.LabelFor(model => model.EmpJoiningTime) &nbsp; @Html.EditorFor(model => model.EmpJoiningTime, new { htmlattributes = new { @class = "form-control" } })</p>
+    @Html.ValidationMessageFor(model => model.EmpJoiningTime, "", new { @class = "text-danger" })
+
+
+
+    <br />
+
+    <input type="submit" value="Submit" class="btn btn-info" />
+    @Html.Raw(ViewData["SuccesMessage"])
+
+
+}

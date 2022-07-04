@@ -1,0 +1,53 @@
+﻿@model Login.Models.user
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+<div class="row">
+    <div class="col-md-3 col-md-offset-4"> <!--in bootstrap we have 12 clumns we are using 3 and second offset class means we are shifting to 4 cols ahead-->
+        <div style="border: 5px black ridge; padding:10px" >
+            @using(Html.BeginForm("Index","Login",FormMethod.Post))//for post action from submit button
+             {
+             <table height="200">
+                <tr>
+                    <th colspan="2" style="font-size:25px" class="text-center">LOGIN</th>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.username)</td>
+                    <td>
+                        @Html.TextBoxFor(model => model.username, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                     </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.password)</td>
+                    <td>
+                        @Html.PasswordFor(model => model.password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                        <br />
+                        @ViewBag.Errormessage
+
+                    </td>
+                </tr>
+
+                <tr>
+                     <td>
+                     </td>
+                    <td>
+                        <input name="login " type="submit" value="Submit" class="btn btn-info" />
+                        <a href="/Login/Reset" class="btn btn-danger">Reset</a>
+
+                    </td>
+                </tr>
+
+
+            </table>
+             }
+        </div>
+    </div>
+</div>

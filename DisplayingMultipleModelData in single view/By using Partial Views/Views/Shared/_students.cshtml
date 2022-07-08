@@ -1,0 +1,32 @@
+﻿@model IEnumerable<By_using_Partial_Views.Models.student>
+
+<h1> Students Data</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Fees</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.id</td>
+                <td>@i.name</td>
+                <td>@i.gender</td>
+                <td>@(i.@class)</td>
+                <td> @i.fees</td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+

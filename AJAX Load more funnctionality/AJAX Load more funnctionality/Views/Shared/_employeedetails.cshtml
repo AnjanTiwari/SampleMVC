@@ -1,0 +1,82 @@
+﻿@model IEnumerable<AJAX_Load_more_funnctionality.Models.employee>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salary)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salary)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+
+    }
+
+    @if (Convert.ToInt32(Session["data"]) > Model.Count()) //this is to hide load more button once all records are shown
+    {
+    }
+    else
+    {
+        <tr>
+            <td colspan="7" align="center"> <!--to make that button in center-->
+                <div id="Loader" , style="display:none">
+                    <img src="~/Images/Loader.gif" height="80" width="80" />
+                </div>
+
+                @Ajax.ActionLink("Load more", "Index", "Home",
+
+                new AjaxOptions()
+                {
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "DivUpdate",
+                    LoadingElementId = "Loader"
+                },
+                new { @class = "btn btn-info" } //to make this link look like a button
+
+
+
+                )
+
+            </td>
+        </tr>
+    }
+
+</table>
+

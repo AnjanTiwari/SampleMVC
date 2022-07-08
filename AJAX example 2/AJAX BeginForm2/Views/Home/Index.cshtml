@@ -1,0 +1,84 @@
+﻿@model IEnumerable<AJAX_BeginForm2.Models.employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div id="Loaderr"style="display:none">
+    <img src="~/Images/Loader.gif" />
+</div>
+
+@using (Ajax.BeginForm("Index", "Home",
+     new AjaxOptions()
+     {
+         HttpMethod = "POST",
+         InsertionMode = InsertionMode.Replace,
+         UpdateTargetId = "Div1",
+         LoadingElementId="Loaderr"
+
+     }
+
+
+
+    ))
+{
+
+    <label>Search By Name</label>
+    <input type="text" name="e" /><!--whenever we willgive some value to search ...to call that value we will use e -->
+    <input type="submit" value="Search" />
+}
+<div id="Div1">
+    <!--this meanns what ever result comes it will be replaced by whole table-->
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.salary)
+            </th>
+            <th></th>
+        </tr>
+
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="4">
+                    No rows found.....
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.age)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.salary)
+                    </td>
+
+                </tr>
+            }
+        }
+
+    </table>
+</div>
+<script src="~/Scripts/jquery-1.9.0.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

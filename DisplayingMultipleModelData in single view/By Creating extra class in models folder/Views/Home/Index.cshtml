@@ -1,0 +1,85 @@
+﻿@using By_Creating_extra_class_in_models_folder.Models
+@model MultiModelData
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h1> STUDENTS DATA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Fees</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <!--to implment it through viewbag -->
+        @*
+        @foreach (var i in ViewBag.student)
+        *@
+        <!--to implment it through viewdata -->
+        @*
+        @foreach (var i in (List<student>)ViewData["student"])
+        *@
+        @foreach (var i in Model.my_students)
+        {
+            <tr>
+                <td>@i.id</td>
+                <td>@i.name</td>
+                <td>@i.gender</td>
+                <td>@(i.@class)</td>
+                <td> @i.fees</td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<BR />
+<br />
+<h1> Teachers DATA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Qualification</th>
+            <th>Salary</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <!--to implment it through viebag -->
+        @*
+        @foreach (var i in ViewBag.teacher)
+        *@
+
+        <!--to implment it through viewdata -->
+        @*
+        @foreach (var i in (List<teacher>)ViewData["teacher"])
+        *@
+
+        @foreach (var i in Model.my_teachers)
+        {
+            <tr>
+                <td>@i.id</td>
+                <td>@i.name</td>
+                <td>@i.gender</td>
+                <td>@i.qualification</td>
+                <td> @i.salary</td>
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+

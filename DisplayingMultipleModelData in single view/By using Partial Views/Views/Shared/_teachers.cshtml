@@ -1,0 +1,38 @@
+﻿@model IEnumerable<By_using_Partial_Views.Models.teacher>
+
+<h1> Teachers Data</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Qualification</th>
+            <th>Salary</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <!--to implment it through viebag -->
+        @*
+            @foreach (var i in ViewBag.teacher)
+        *@
+
+        <!--to implment it through viewdata -->
+        @*
+            @foreach (var i in (List<teacher>)ViewData["teacher"])
+        *@
+
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.id</td>
+                <td>@i.name</td>
+                <td>@i.gender</td>
+                <td>@i.qualification</td>
+                <td> @i.salary</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

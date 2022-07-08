@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MultipleModelDataInSingleViewModelStoreContainer" CdmEntityContainer="MultipleModelDataInSingleViewEntities">
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="MultipleModelDataInSingleViewModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="fees" ColumnName="fees" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teachers">
+      <EntityTypeMapping TypeName="MultipleModelDataInSingleViewModel.teacher">
+        <MappingFragment StoreEntitySet="teacher">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

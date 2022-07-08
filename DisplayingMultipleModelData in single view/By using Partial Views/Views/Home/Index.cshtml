@@ -1,0 +1,15 @@
+﻿@using By_using_Partial_Views.Models
+@model MultiModelData
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    Html.RenderAction("Student");
+}
+
+@{
+    Html.RenderAction("Teacher");
+}

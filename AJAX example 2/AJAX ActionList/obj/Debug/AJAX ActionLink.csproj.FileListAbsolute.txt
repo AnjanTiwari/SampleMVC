@@ -73,3 +73,4 @@ D:\MVC 5\AJAX example 2\AJAX ActionList\obj\Debug\AJAX ActionLink.csproj.CoreCom
 D:\MVC 5\AJAX example 2\AJAX ActionList\obj\Debug\AJAX ActionLink.csproj.CopyComplete
 D:\MVC 5\AJAX example 2\AJAX ActionList\obj\Debug\AJAX ActionList.dll
 D:\MVC 5\AJAX example 2\AJAX ActionList\obj\Debug\AJAX ActionList.pdb
+D:\MVC 5\AJAX example 2\AJAX ActionList\obj\Debug\AJAX ActionLink.csproj.AssemblyReference.cache

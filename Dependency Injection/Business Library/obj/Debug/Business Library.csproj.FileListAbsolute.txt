@@ -1,0 +1,6 @@
+D:\MVC 5\Dependency Injection\Business Library\bin\Debug\Business Library.dll
+D:\MVC 5\Dependency Injection\Business Library\bin\Debug\Business Library.pdb
+D:\MVC 5\Dependency Injection\Business Library\obj\Debug\Business Library.csproj.AssemblyReference.cache
+D:\MVC 5\Dependency Injection\Business Library\obj\Debug\Business Library.csproj.CoreCompileInputs.cache
+D:\MVC 5\Dependency Injection\Business Library\obj\Debug\Business Library.dll
+D:\MVC 5\Dependency Injection\Business Library\obj\Debug\Business Library.pdb
